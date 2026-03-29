@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="RPS.css" />
+</head>
+<body>
+
+  <div class="game-wrap">
+
+    <!-- Title -->
+    <div class="title-block">
+      <h1>Rock Paper Scissors</h1>
+      <p class="subtitle">Best of infinite &middot; No mercy</p>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="score-bar">
+      <div class="score-item player">
+        <div class="score-label">You</div>
+        <div class="score-num" id="playerScore">0</div>
+      </div>
+      <div class="score-item draws">
+        <div class="score-label">Draws</div>
+        <div class="score-num" id="drawScore">0</div>
+      </div>
+      <div class="score-divider">vs</div>
+      <div class="score-item computer">
+        <div class="score-num" id="cpuScore">0</div>
+        <div class="score-label">CPU</div>
+      </div>
+    </div>
+
+    <!-- Arena -->
+    <div class="arena">
+      <span class="streak-badge" id="streakBadge">🔥 3x Streak</span>
+
+      <div class="hands-display">
+        <div class="hand-side player">
+          <span class="hand-emoji" id="playerHand">✊</span>
+          <span class="hand-name">You</span>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="hand-side computer">
+          <span class="hand-emoji" id="cpuHand">✊</span>
+          <span class="hand-name">CPU</span>
+        </div>
+      </div>
+
+      <div class="result-banner">
+        <div class="result-text" id="resultText"></div>
+        <div class="result-detail" id="resultDetail"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="arena">
+      <div class="choices">
+        <button class="choice-btn rock"     onclick="play('rock')"     id="btn-rock">
+          ✊ <span class="choice-label">Rock</span>
+        </button>
+        <button class="choice-btn paper"    onclick="play('paper')"    id="btn-paper">
+          🖐️ <span class="choice-label">Paper</span>
+        </button>
+        <button class="choice-btn scissors" onclick="play('scissors')" id="btn-scissors">
+          ✌️ <span class="choice-label">Scissors</span>
+        </button>
+      </div>
+
+      <div class="timer-row">
+        <div class="timer-track">
+          <div class="timer-fill" id="timerFill"></div>
+        </div>
+        <div class="timer-num" id="timerNum">10</div>
+      </div>
+
+      <div class="status-text" id="statusText">Choose your weapon!</div>
+    </div>
+
+    <!-- Play Again -->
+    <button class="play-again-btn" onclick="resetGame()">↺ &nbsp; Play Again</button>
+
+  </div>
+
+  <script src="RPS.js"></script>
+</body>
+</html>
