@@ -14,3 +14,4 @@ https://anantrayal2006.github.io/Rock-Paper-Scissors/
 - Interactive UI
 - Random computer moves
 - Score tracking
+- Crazyyy
